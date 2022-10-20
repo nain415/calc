@@ -1,5 +1,5 @@
 const Calculator = {
-    value: 0,
+    value: '',
 
     add(a,b) {
         return a+b;
