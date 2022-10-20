@@ -32,7 +32,7 @@ const Calculator = {
                 return divide(a,b);
                 break;
             default:
-                return "ERROR"
+                return "ERROR";
                 break;
         }
     },
@@ -43,3 +43,11 @@ const numberBtns = document.querySelectorAll(".num");
 const operatorBtns = document.querySelectorAll(".operator");
 const equalBtn = document.getElementById("=");
 const clearBtn = document.getElementById("clear");
+
+for (numBtn of numberBtns) {
+    numBtn.addEventListener("click", numCallBack)
+};
+
+function numCallBack(numBtn) {
+    return null;
+}
