@@ -51,5 +51,10 @@ for (numBtn of numberBtns) {
 };
 
 function numCallBack(numBtn) {
+    Calculator.value += this.value;
+    updateDisplay();
+}
+
+function updateDisplay() {
     return null;
 }
