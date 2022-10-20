@@ -16,12 +16,14 @@ header {
 
 div.main-container > div {
     display:flex;
-    height: 4vw
+    height: 4vw;
+    gap: 5px;
 }
 
 button {
     flex-grow: 1;
     font-size: 25px;
+    width: 10px;
 }
 
 .display {
