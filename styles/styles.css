@@ -1,0 +1,13 @@
+.main-container {
+    width: 15vw;
+    margin: 100px auto;
+}
+
+div.main-container > div {
+    display:flex;
+}
+
+button {
+    flex-grow: 1;
+}
+
