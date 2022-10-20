@@ -82,7 +82,6 @@ function isNum(str) {
 
 clearBtn.addEventListener('click', (btn) => {
     Calculator.value = '';
-    computed.value = 0;
     updateDisplay('0');
 });
 
@@ -91,7 +90,6 @@ equalBtn.addEventListener('click', equalCallBack);
 function equalCallBack(equalBtn) {
     if (Calculator.value.length > 0 && isNum(Calculator.value.substr(-1,1))) {
         Calculator.value = String(oneOperator(Calculator.value))
-        computed.value = Calculator.value;
         updateDisplay();
     };
 }
