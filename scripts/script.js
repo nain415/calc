@@ -43,6 +43,8 @@ const numberBtns = document.querySelectorAll(".num");
 const operatorBtns = document.querySelectorAll(".operator");
 const equalBtn = document.getElementById("=");
 const clearBtn = document.getElementById("clear");
+const display = document.getElementById("computed");
+
 
 for (numBtn of numberBtns) {
     numBtn.addEventListener("click", numCallBack)
