@@ -33,6 +33,7 @@ const Calculator = {
                 return this.multiply(a,b);
                 break;
             case "/":
+                if (b === 0) return "Division by zero is undefined";
                 return this.divide(a,b);
                 break;
             default:
