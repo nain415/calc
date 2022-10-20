@@ -85,7 +85,8 @@ clearBtn.addEventListener('click', (btn) => {
 equalBtn.addEventListener('click', equalCallBack);
 
 function equalCallBack(equalBtn) {
-    return null;
+    Calculator.value = oneOperator(Calculator.value);
+    updateDisplay();
 }
 
 // assumes only one operator in equation numStr
