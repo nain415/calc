@@ -49,7 +49,7 @@ const operatorBtns = document.querySelectorAll(".operator");
 const equalBtn = document.getElementById("=");
 const clearBtn = document.getElementById("clear");
 const computed = document.getElementById("computed");
-
+const decimalBtn = document.getElementById("dot");
 
 for (const numBtn of numberBtns) {
     numBtn.addEventListener("click", numCallBack)
@@ -94,6 +94,9 @@ function equalCallBack(equalBtn) {
         updateDisplay();
     };
 }
+
+
+
 
 // assumes only one operator in equation numStr
 function oneOperator(numStr) {
