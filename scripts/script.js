@@ -55,8 +55,8 @@ function numCallBack(numBtn) {
     updateDisplay();
 }
 
-function updateDisplay() {
-    computed.textContent = Calculator.value;
+function updateDisplay(val) {
+    computed.textContent = (val == null) ? Calculator.value : val;
 }
 
 for (const operatorBtn of operatorBtns) {
@@ -74,3 +74,9 @@ function isNum(str) {
     nums = ['0','1','2','3','4','5','6','7','8','9'];
     return nums.includes(str);
 }
+
+clearBtn.addEventListener('click', (btn) => {
+    Calculator.value = '';
+    computed.value = 0;
+    updateDisplay('0');
+});
