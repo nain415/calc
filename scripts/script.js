@@ -85,8 +85,8 @@ clearBtn.addEventListener('click', (btn) => {
 equalBtn.addEventListener('click', equalCallBack);
 
 function equalCallBack(equalBtn) {
-    Calculator.value = oneOperator(Calculator.value);
-    updateDisplay();
+    computed.value = oneOperator(Calculator.value);
+    updateDisplay(computed.value);
 }
 
 // assumes only one operator in equation numStr
@@ -94,7 +94,7 @@ function oneOperator(numStr) {
     const operator = getOperator(numStr)
     const operands = numStr.split(operator);
     // if you split it and get 1 element, then transform nothing
-    if ((operands.length) === 1) return;
+    if ((operands.length) === 1) return numStr;
     // if you split it and get 2 elements, then perform the correct operation on them
     if ((operands.length === 2)) return Calculator.operate(operator, Number(operands[0]), Number(operands[1]));
 }
