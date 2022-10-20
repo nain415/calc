@@ -1,6 +1,8 @@
 const Calculator = {
     value: '',
+
     operatorsList: ["+","-","*","/"],
+
 
 
     add(a,b) {
@@ -67,6 +69,7 @@ for (const operatorBtn of operatorBtns) {
 
 function operatorCallBack(operator) {
     if (Calculator.value.length > 0 && isNum(Calculator.value.substr(-1,1))) {
+        Calculator.value = String(oneOperator(Calculator.value))
         Calculator.value += this.value;
         updateDisplay();
     };
@@ -86,7 +89,10 @@ clearBtn.addEventListener('click', (btn) => {
 equalBtn.addEventListener('click', equalCallBack);
 
 function equalCallBack(equalBtn) {
-    return null;
+    if (Calculator.value.length > 0 && isNum(Calculator.value.substr(-1,1))) {
+        Calculator.value = oneOperator(Calculator.value)
+        updateDisplay();
+    };
 }
 
 // assumes only one operator in equation numStr
