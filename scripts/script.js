@@ -59,8 +59,9 @@ for (const operatorBtn of operatorBtns) {
     operatorBtn.addEventListener("click", operatorCallBack);
 };
 
-function operatorCallBack() {
-    return null;
+function operatorCallBack(operator) {
+    Calculator.value += this.value;
+    updateDisplay();
 }
 
 
