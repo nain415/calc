@@ -88,11 +88,14 @@ function equalCallBack(equalBtn) {
     return null;
 }
 
+// assumes only one operator in equation numStr
 function oneOperator(numStr) {
-    return null;
+    const operator = getOperator(numStr)
+    const operands = numStr.split(operator);
     // if you split it and get 1 element, then transform nothing
-
+    if ((operands.length) === 1) return;
     // if you split it and get 2 elements, then perform the correct operation on them
+    if ((operands.length === 2)) return Calculator.operate(operator, Number(operands[0]), Number(operands[1]));
 }
 
 function getOperator(numStr) {
