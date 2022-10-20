@@ -21,16 +21,16 @@ const Calculator = {
     operate(operator, a, b) {
         switch(operator) {
             case "+":
-                return add(a,b);
+                return this.add(a,b);
                 break;
             case "-":
-                return subtract(a,b);
+                return this.subtract(a,b);
                 break;
             case "*":
-                return multiply(a,b);
+                return this.multiply(a,b);
                 break;
             case "/":
-                return divide(a,b);
+                return this.divide(a,b);
                 break;
             default:
                 return "ERROR";
