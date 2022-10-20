@@ -1,26 +1,36 @@
 body {
-    background-color: darkmagenta;
+    background-color: grey;
+}
+
+header {
+    text-align: center;
+    background-color: aliceblue;
 }
 
 .main-container {
-    width: 15vw;
+    width: 25vw;
+    height: 25vw;
     margin: 100px auto;
     border: 15px solid;
 }
 
 div.main-container > div {
     display:flex;
+    height: 4vw
 }
 
 button {
     flex-grow: 1;
+    font-size: 25px;
 }
 
 .display {
     background-color: whitesmoke;
 }
+
 #computed {
-    align-self:flex-end;
+    align-self: center;
+    font-size: 32px;
     background-color: unset;
     flex-grow: 1;
     background: rgb(0,0,0,0.3);
