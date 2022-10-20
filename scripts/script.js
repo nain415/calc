@@ -91,6 +91,7 @@ equalBtn.addEventListener('click', equalCallBack);
 function equalCallBack(equalBtn) {
     if (Calculator.value.length > 0 && isNum(Calculator.value.substr(-1,1))) {
         Calculator.value = String(oneOperator(Calculator.value))
+        computed.value = Calculator.value;
         updateDisplay();
     };
 }
