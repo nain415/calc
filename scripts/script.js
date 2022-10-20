@@ -46,7 +46,7 @@ const clearBtn = document.getElementById("clear");
 const computed = document.getElementById("computed");
 
 
-for (numBtn of numberBtns) {
+for (const numBtn of numberBtns) {
     numBtn.addEventListener("click", numCallBack)
 };
 
@@ -55,6 +55,15 @@ function numCallBack(numBtn) {
     updateDisplay();
 }
 
-function updateDisplay() {
+for (const operatorBtn of operatorBtns) {
+    operatorBtn.addEventListener("click", operatorCallBack);
+};
+
+function operatorCallBack() {
     return null;
+}
+
+
+function updateDisplay() {
+    computed.textContent = Calculator.value;
 }
