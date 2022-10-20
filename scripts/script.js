@@ -55,16 +55,22 @@ function numCallBack(numBtn) {
     updateDisplay();
 }
 
+function updateDisplay() {
+    computed.textContent = Calculator.value;
+}
+
 for (const operatorBtn of operatorBtns) {
     operatorBtn.addEventListener("click", operatorCallBack);
 };
 
 function operatorCallBack(operator) {
-    Calculator.value += this.value;
-    updateDisplay();
+    if (Calculator.value.length > 0 && isNum(Calculator.value.substr(-1,1))) {
+        Calculator.value += this.value;
+        updateDisplay();
+    };
 }
 
-
-function updateDisplay() {
-    computed.textContent = Calculator.value;
+function isNum(str) {
+    nums = ['0','1','2','3','4','5','6','7','8','9'];
+    return nums.includes(str);
 }
