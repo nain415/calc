@@ -108,6 +108,6 @@ function oneOperator(numStr) {
 function getOperator(numStr) {
     // determine which operation is occuring given a★b, for numStrs a and b and unknown operator ★
     for (operator of Calculator.operatorsList) {
-        if (numStr.includes(operator)) return operator;
+        if (numStr.substring(1).includes(operator)) return operator; //after first char incase of negative leading num
     }
 }
