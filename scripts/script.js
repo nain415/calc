@@ -98,7 +98,8 @@ function equalCallBack(equalBtn) {
 decimalBtn.addEventListener('click', decimalCallBack);
 
 function decimalCallBack(decimalBtn) {
-    return null;
+    Calculator.value += ".";
+    updateDisplay();
 }
 
 
