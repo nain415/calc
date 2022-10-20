@@ -94,7 +94,7 @@ function oneOperator(numStr) {
     // if you split it and get 2 elements, then perform the correct operation on them
 }
 
-function isOperation(operator) {
+function getOperator(numStr) {
     return null;
     // determine which operation is occuring given a★b, for numStrs a and b and unknown operator ★
 }
