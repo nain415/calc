@@ -80,3 +80,9 @@ clearBtn.addEventListener('click', (btn) => {
     computed.value = 0;
     updateDisplay('0');
 });
+
+equalBtn.addEventListener('click', equalCallBack);
+
+function equalCallBack(equalBtn) {
+    return null;
+}
