@@ -36,5 +36,10 @@ const Calculator = {
                 break;
         }
     },
-}
+};
 
+
+const numberBtns = document.querySelectorAll(".num");
+const operatorBtns = document.querySelectorAll(".operator");
+const equalBtn = document.getElementById("=");
+const clearBtn = document.getElementById("clear");
