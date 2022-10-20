@@ -1,5 +1,6 @@
 const Calculator = {
     value: '',
+    operators: ["+","-","*","/"],
 
     add(a,b) {
         return a+b;
@@ -95,6 +96,6 @@ function oneOperator(numStr) {
 }
 
 function getOperator(numStr) {
-    return null;
     // determine which operation is occuring given a★b, for numStrs a and b and unknown operator ★
+    
 }
